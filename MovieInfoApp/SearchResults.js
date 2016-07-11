@@ -26,12 +26,11 @@ var styles = StyleSheet.create({
   },
   container: {
     padding: 30,
-    marginTop: 65,
     alignItems: 'center'
   },
   thumb: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 150,
     marginRight: 10
   },
   textContainer: {

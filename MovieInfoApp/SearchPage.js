@@ -20,13 +20,13 @@ var SearchResults = require('./SearchResults');
 var styles = StyleSheet.create({
   description: {
     marginBottom: 20,
-    fontSize: 18,
+    fontSize: 22,
     textAlign: 'center',
     color: '#656565'
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // or 'stretch'
+    resizeMode: 'cover',
   },
   container: {
     padding: 30,
@@ -34,7 +34,6 @@ var styles = StyleSheet.create({
     alignItems: 'center'
   },
   flowRight: {
-  flexDirection: 'row',
   alignItems: 'center',
   alignSelf: 'stretch'
 },
@@ -45,6 +44,7 @@ buttonText: {
 },
 button: {
   height: 36,
+  width: 60,
   flex: 1,
   flexDirection: 'row',
   backgroundColor: '#48BBEC',
@@ -52,7 +52,7 @@ button: {
   borderWidth: 1,
   borderRadius: 8,
   marginBottom: 10,
-  alignSelf: 'stretch',
+  marginTop: 10,
   justifyContent: 'center'
 },
 searchInput: {
