@@ -12,7 +12,6 @@ TextInput,
 View,
 TouchableHighlight,
 Image,
-ListView,
 ActivityIndicatorIOS
 } = ReactNative;
 
@@ -110,24 +109,11 @@ class SearchPage extends Component {
   .catch(error =>
      this.setState({
       isLoading: false,
-      message: 'Something bad happened ' + error
+      message: 'There was an error: ' + error
    }));
  }
 
-// getMoviesFromApiAsync() {
-//     return fetch('http://facebook.github.io/react-native/movies.json')
-//       .then((response) => response.json())
-//       .then((responseJson) => {
-//         this._handleResponse(json.response);
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//       });
-//   }
-
 _handleResponse(response) {
-  console.log('foo');
-  // console.log(response.title);
   this.setState({ isLoading: false , message: '' });
   if (response.Response.substr(0, 1) !== 'F') {
     this.props.navigator.push({
@@ -135,7 +121,6 @@ _handleResponse(response) {
   component: SearchResults,
   passProps: {movies: response}
 });
-    console.log('foobar');
   } else {
     this.setState({ message: 'Movie not recognized; please try again.'});
   }

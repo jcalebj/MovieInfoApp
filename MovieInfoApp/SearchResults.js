@@ -8,16 +8,10 @@ var ReactNative = require('react-native');
 var {
 StyleSheet,
 Text,
-TextInput,
 View,
-TouchableHighlight,
 Image,
-ListView,
 ScrollView,
-ActivityIndicatorIOS
 } = ReactNative;
-
-//var MovieView = require('./MovieView');
 
 var styles = StyleSheet.create({
   description: {
@@ -63,34 +57,15 @@ var styles = StyleSheet.create({
 });
 
 class SearchResults extends Component {
- 
-  // constructor(props) {
-  //   super(props);
-  //   var dataSource = new ListView.DataSource(
-  //     {rowHasChanged: (r1, r2) => r1.url_thumb !== r2.url_thumb});
-  //   this.state = {
-  //     dataSource: dataSource.cloneWithRows(this.props.movies)
-  //   };
-  // }
- 
-  // renderRow(rowData, sectionID, rowID) {
-  //   return (
-  //     <TouchableHighlight
-  //         underlayColor='#dddddd'>
-  //       <View>
-  //         <Text>{rowData.title}</Text>
-  //       </View>
-  //     </TouchableHighlight>
-  //   );
-  // }
- 
+
   render() {
     return (
   <ScrollView style={styles.textContainer}>
-          <View style={styles.container}>
-            <Image source={{uri: this.props.movies.Poster}} style={styles.thumb}/>
-          </View>
-      <Text style={styles.description}>
+      <View style={styles.container}>
+        <Image source={{uri: this.props.movies.Poster}} 
+                style={styles.thumb}/>
+      </View>
+        <Text style={styles.description}>
           Title: {this.props.movies.Title}
         </Text>
         <Text style={styles.description}>
@@ -123,11 +98,7 @@ class SearchResults extends Component {
         <Text style={styles.description}>
           imdbRating: {this.props.movies.imdbRating}
         </Text>
-        </ScrollView>
-
- //     <ListView
-   //     dataSource={this.state.dataSource}
-     //   renderRow={this.renderRow.bind(this)}/>
+  </ScrollView>
     );
   }
  
